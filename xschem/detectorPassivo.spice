@@ -1,0 +1,34 @@
+*****************************************************************************************
+.TITLE subckt detectorPassivo
+
+* expanding   symbol:  /home/wisla/sky130_skel/Myschematics/detectorPassivo.sym # of pins=4
+* sym_path: /home/wisla/sky130_skel/Myschematics/detectorPassivo.sym
+* sch_path: /home/wisla/sky130_skel/Myschematics/detectorPassivo.sch
+
+* ---------------------------------- Declaracao do subcircuito --------------------------
+*.ipin din
+ *.ipin dB
+ *.opin do
+ *.iopin ground
+ 
+** MXXXXXXX nd ng ns nb mname
+
+.SUBCKT detectorPassivo din dB do gnd
+ XM1 nd dB gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=22.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
+ + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
+ + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+ 
+ * ---- componentes passivos 
+ * ---------- 15pF na entrada
+ XC1 din nd sky130_fd_pr__cap_mim_m3_1 W=87 L=87 MF=1 m=1
+  
+ * ---------- 15pF 	
+ XCf do gnd sky130_fd_pr__cap_mim_m3_1 W=87 L=87 MF=1 m=1
+ 
+ * ---------- 106.86k
+ XRf do nd gnd sky130_fd_pr__res_xhigh_po_0p35 L=18.7 mult=1 m=1
+.ENDS
+
+
+*.GLOBAL GND
+** flattened .save nodes
