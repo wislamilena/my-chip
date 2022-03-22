@@ -4,12 +4,10 @@
 
 ---
 
+This design contains an envelope detector. This block is formed by an nfet_01V8 transistor and an RC filter.
 
-## OTA and detector blocks
- This design contains an envelope detector. This block is formed by an nfet_01V8 transistor and an RC filter. 
- The design implementation was based on the repository [caravel_user_project_analog](https://github.com/efabless/caravel_user_project_analog.git). 
+![image](https://user-images.githubusercontent.com/68408995/159400079-933740d9-530a-49d9-926f-b9d27b6b1e5a.png)
 
-
-
+The development was based on the repository: https://github.com/efabless/caravel_user_project_analog.git
 
 Refer to [README](docs/source/index.rst) for this sample project documentation. 
