@@ -8,11 +8,6 @@ This design contains an envelope detector and an OTA. This block is formed by an
 
 ![image](https://user-images.githubusercontent.com/68408995/159400079-933740d9-530a-49d9-926f-b9d27b6b1e5a.png)
 
-
-The OTA block is a OTA is current mirror type with pfet transistors operating in strong and moderate inversion. 
-![image](https://user-images.githubusercontent.com/68408995/159550869-00b86fc9-94ae-4efd-bafa-be7789a7e2f6.png)
-
-
 The development was based on the repository: https://github.com/efabless/caravel_user_project_analog.git
 
 Refer to [README](docs/source/index.rst) for this sample project documentation. 
